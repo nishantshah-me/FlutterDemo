@@ -16,7 +16,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Center(
+        child: SingleChildScrollView(
           child: Container(
             margin: EdgeInsets.all(50.0),
             child: Column(
@@ -67,7 +67,7 @@ class _LoginState extends State<Login> {
                             // the form is invalid.
                             if (_formKey.currentState.validate()) {
                               // Process data.
-                              Navigator.pushNamed(context, landing,
+                              Navigator.pushNamed(context, Router.LANDING,
                                   arguments: {"email": emailController.text});
                             }
                           },

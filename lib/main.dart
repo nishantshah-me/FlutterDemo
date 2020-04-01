@@ -10,10 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        routes: {
-          login: (context) => Login(),
-          landing: (context) => PhotoList()
-        },
+        onGenerateRoute: Router.generateRoute,
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ));
